@@ -84,3 +84,30 @@
     if(e.key === 'Escape'){ close(); toggle.focus(); }
   });
 })();
+
+(function(){
+  var root = document.documentElement;
+  var toggle = document.getElementById('themeToggle');
+  if(!toggle) return;
+  var media = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function isDark(){
+    var explicit = root.getAttribute('data-theme');
+    if(explicit === 'dark') return true;
+    if(explicit === 'light') return false;
+    return media.matches;
+  }
+  function sync(){
+    toggle.setAttribute('aria-pressed', String(isDark()));
+  }
+
+  sync();
+  media.addEventListener('change', sync);
+
+  toggle.addEventListener('click', function(){
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try{ localStorage.setItem('theme', next); }catch(e){}
+    sync();
+  });
+})();

@@ -786,6 +786,38 @@ footer{ padding:48px 0 72px; }
 .connect-line .site .dot{ color:var(--magenta); }
 .connect-line .meta{ color:var(--ink-soft); font-size:0.86rem; }
 
+.connect-meta{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.theme-toggle{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  border:1px solid var(--rule);
+  background:var(--paper-raised);
+  color:var(--ink);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:border-color .15s, color .15s;
+}
+.theme-toggle:hover, .theme-toggle:focus-visible{ border-color:var(--magenta); color:var(--magenta); }
+.theme-icon{ width:17px; height:17px; }
+.theme-toggle .icon-moon{ display:block; }
+.theme-toggle .icon-sun{ display:none; }
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .theme-toggle .icon-moon{ display:none; }
+  :root:not([data-theme="light"]) .theme-toggle .icon-sun{ display:block; }
+}
+:root[data-theme="dark"] .theme-toggle .icon-moon{ display:none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun{ display:block; }
+:root[data-theme="light"] .theme-toggle .icon-moon{ display:block; }
+:root[data-theme="light"] .theme-toggle .icon-sun{ display:none; }
+
 .socials{
   display:flex;
   flex-wrap:wrap;

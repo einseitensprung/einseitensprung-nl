@@ -9,6 +9,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;600;700&family=Inconsolata:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<script>
+(function(){
+  try{
+    var t = localStorage.getItem('theme');
+    if(t === 'light' || t === 'dark'){ document.documentElement.setAttribute('data-theme', t); }
+  }catch(e){}
+})();
+</script>
 
 </head>
 <body>
@@ -16,6 +24,22 @@
   <symbol id="icon-mail" viewBox="0 0 24 24">
     <rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
     <path d="M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="icon-sun" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+      <line x1="12" y1="2.5" x2="12" y2="5"/>
+      <line x1="12" y1="19" x2="12" y2="21.5"/>
+      <line x1="2.5" y1="12" x2="5" y2="12"/>
+      <line x1="19" y1="12" x2="21.5" y2="12"/>
+      <line x1="4.9" y1="4.9" x2="6.6" y2="6.6"/>
+      <line x1="17.4" y1="17.4" x2="19.1" y2="19.1"/>
+      <line x1="4.9" y1="19.1" x2="6.6" y2="17.4"/>
+      <line x1="17.4" y1="6.6" x2="19.1" y2="4.9"/>
+    </g>
+  </symbol>
+  <symbol id="icon-moon" viewBox="0 0 24 24">
+    <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 1 0 10.5 10.5z" fill="currentColor"/>
   </symbol>
 </svg>
 <div class="glow" aria-hidden="true"></div>
@@ -89,7 +113,13 @@
   <footer>
     <div class="connect-line">
       <a class="site" href="https://einseitensprung.at/" target="_blank" rel="noopener">einseitensprung<span class="dot">.</span>at</a>
-      <span class="meta">Wien, Österreich</span>
+      <div class="connect-meta">
+        <span class="meta">Wien, Österreich</span>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false" aria-label="Farbschema umschalten">
+          <svg class="theme-icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-sun"></use></svg>
+          <svg class="theme-icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-moon"></use></svg>
+        </button>
+      </div>
     </div>
     <nav class="socials" aria-label="Social Media">
       <a href="https://facebook.com/einseitensprung" target="_blank" rel="noopener">Facebook</a>
