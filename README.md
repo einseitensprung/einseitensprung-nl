@@ -6,7 +6,7 @@ Ein handgebauter Onepager, der den Look und die Themen von [einseitensprung.at/b
 
 ## Design
 
-- **Farben** — das echte Marken-Plum/Magenta des Blogs (`#8e1963` / `#bc2184`), aus dem Original-Stylesheet extrahiert, plus die Tag-Akzentfarben als Kategorie-Coding
+- **Farben** — helles Blau-Theme (`#1c72b8` / `#2ea8e6`) statt des Original-Plum/Magenta, plus die Tag-Akzentfarben als Kategorie-Coding
 - **Typografie** — Josefin Sans (Display) + Inconsolata (Fließtext), das originale Font-Pairing des Blogs, bewusst als durchgängiger Terminal-/Code-Look übernommen
 - **Struktur** — ein Blog-Feed im Git-Log-Stil: eine Datumsschiene mit farbcodierten Knoten statt generischer Nummerierung, dazu Tag-Chips pro Eintrag
 - **Barrierefreiheit** — sichtbare Fokus-States, `prefers-reduced-motion` respektiert, Light-/Dark-Mode über CSS-Tokens
@@ -14,9 +14,11 @@ Ein handgebauter Onepager, der den Look und die Themen von [einseitensprung.at/b
 ## Struktur
 
 ```
-index.html          – Markup
+index.html          – Markup (Blog-Übersicht)
+detail.html          – Markup (einzelner Blog-Beitrag)
+newsletter.html       – Markup (Newsletter-Archiv)
 assets/style.css     – Styles
-assets/script.js     – Pagination-Interaktion
+assets/script.js     – Pagination-, Such- und Menü-Interaktion
 ```
 
 Keine Build-Schritte, keine Bundler — die Dateien werden direkt verlinkt.
