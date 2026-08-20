@@ -468,6 +468,21 @@ section:last-of-type{ border-bottom:none; }
 }
 .focus-list li::before{ content:"— "; color:var(--magenta); }
 
+/* ---------- Newsletter-Anmeldeformular ---------- */
+
+.newsletter-form{
+  border:1px solid var(--rule);
+  border-radius:10px;
+  overflow:hidden;
+  background:var(--paper-raised);
+}
+.newsletter-form iframe{
+  display:block;
+  width:100%;
+  min-height:900px;
+  border:0;
+}
+
 /* ---------- Verified / seals ---------- */
 
 .seals{
