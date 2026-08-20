@@ -1,6 +1,6 @@
 # Einseitensprung Newsletter
 
-Ein handgebauter Onepager, der den Look von [einseitensprung.at/newsletter](https://einseitensprung.at/newsletter/) übernimmt: das Archiv aller Newsletter-Ausgaben als Pill-Links im Hero, dazu eine Siegel-Reihe mit den echten Qualitätsmerkmalen des Originals (WCAG AAA, DSGVO-konform, handgefertigt).
+Ein handgebauter Onepager, der den Look von [einseitensprung.at/newsletter](https://einseitensprung.at/newsletter/) übernimmt: das Archiv aller Newsletter-Ausgaben als Pill-Links im Hero, dazu eine Siegel-Reihe mit den echten Qualitätsmerkmalen des Originals (WCAG AAA, DSGVO-konform, handgefertigt mit AI-Unterstützung).
 
 **🔗 Live-Preview:** https://einseitensprung.github.io/einseitensprung-nl/
 
