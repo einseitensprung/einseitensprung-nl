@@ -7,7 +7,7 @@ Ein handgebauter Onepager, der den Look von [einseitensprung.at/newsletter](http
 ## Design
 
 - **Farben** — helles Blau-Theme (`#1c72b8` / `#2ea8e6`), plus die Tag-Akzentfarben als Kategorie-Coding
-- **Typografie** — Josefin Sans (Display) + Inconsolata (Fließtext), das originale Font-Pairing des Blogs, bewusst als durchgängiger Terminal-/Code-Look übernommen
+- **Typografie** — Josefin Sans (Display) + Inconsolata (Fließtext), das originale Font-Pairing des Blogs, bewusst als durchgängiger Terminal-/Code-Look übernommen; beide Fonts selbst gehostet statt von Google geladen
 - **Struktur** — die Newsletter-Ausgaben als Pill-Links direkt im Hero, keine Timeline
 - **Barrierefreiheit** — sichtbare Fokus-States, `prefers-reduced-motion` respektiert, Light-/Dark-Mode über CSS-Tokens
 
@@ -17,6 +17,7 @@ Ein handgebauter Onepager, der den Look von [einseitensprung.at/newsletter](http
 index.html          – Markup (Newsletter-Archiv)
 assets/style.css     – Styles
 assets/script.js     – Menü-Interaktion
+assets/fonts/         – selbst gehostete Josefin-Sans-/Inconsolata-Woff2s
 ```
 
 Keine Build-Schritte, keine Bundler — die Dateien werden direkt verlinkt.
@@ -29,7 +30,7 @@ open index.html   # macOS
 start index.html  # Windows
 ```
 
-Kein Build, kein Backend, keine Abhängigkeiten außer den Google-Fonts-Links.
+Kein Build, kein Backend, keine externen Abhängigkeiten — auch die Fonts sind selbst gehostet (`assets/fonts/`), es wird nichts von Google nachgeladen.
 
 ## Hinweis
 
